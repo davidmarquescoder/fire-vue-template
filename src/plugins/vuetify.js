@@ -25,8 +25,18 @@ export default createVuetify({
     VTextFieldPasswordRegister: VTextField,
     VTextFieldPasswordConfirmRegister: VTextField,
     VBtnRegister: VBtn,
+
+    // NOTE ACTION BUTTONS
+    VBtnActionLogin: VBtn,
+    VBtnActionRegister: VBtn,
+    VBtnActionLogout: VBtn,
   },
   defaults: {
+    // NOTE GLOBAL
+    global: {
+      active: false,
+    },
+
     // NOTE LOGIN FORM
     VTextFieldEmailLogin: {
       placeholder: 'Informe seu e-mail',
@@ -107,6 +117,35 @@ export default createVuetify({
       size: 'large',
       text: 'Enviar',
       block: true,
+    },
+
+    // NOTE ACTION BUTTONS
+    VBtnActionLogin: {
+      appendIcon: 'mdi-login',
+      class: 'mx-2 text-uppercase',
+      variant: 'tonal',
+      color: 'primary',
+      text: 'Login',
+      rounded: 'lg',
+      block: false,
+    },
+    VBtnActionRegister: {
+      appendIcon: 'mdi-account-plus',
+      class: 'mx-2 text-uppercase',
+      variant: 'outlined',
+      color: 'secondary',
+      text: 'Registre-se',
+      rounded: 'lg',
+      block: false,
+    },
+    VBtnActionLogout: {
+      appendIcon: 'mdi-logout',
+      class: 'mx-2 text-uppercase',
+      variant: 'outlined',
+      color: 'error',
+      text: 'Sair',
+      rounded: 'lg',
+      block: false,
     },
   },
 })
