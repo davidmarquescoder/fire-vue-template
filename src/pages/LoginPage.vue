@@ -1,10 +1,10 @@
 <template>
   <v-container max-width="600" class="h-75 d-flex flex-column justify-center">
     <div class="border rounded-xl pa-6 bg-surface">
-      <h1 class="text-h4 text-center text-uppercase pb-6">Faça Login</h1>
+      <h1 class="text-center text-uppercase mb-6">Faça Login</h1>
       <VTextFieldEmailLogin v-model="payload.email" />
       <VTextFieldPasswordLogin v-model="payload.password" />
-  
+
       <VBtnLogin
         :disabled="validations"
         @click="submit"
