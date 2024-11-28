@@ -1,14 +1,17 @@
 <template>
-  <v-container max-width="500">
-    <VTextFieldNameRegister v-model="payload.name" />
-    <VTextFieldEmailRegister v-model="payload.email" />
-    <VTextFieldPasswordRegister v-model="payload.password" />
-    <VTextFieldPasswordConfirmRegister v-model="payload.password_confirm" />
-
-    <VBtnRegister
-      :disabled="validations"
-      @click="submit"
-    />
+  <v-container max-width="600" class="h-75 d-flex flex-column justify-center">
+    <div class="border rounded-xl pa-6 bg-surface">
+      <h1 class="text-h4 text-center text-uppercase pb-6">Registre-se</h1>
+      <VTextFieldNameRegister v-model="payload.name" />
+      <VTextFieldEmailRegister v-model="payload.email" />
+      <VTextFieldPasswordRegister v-model="payload.password" />
+      <VTextFieldPasswordConfirmRegister v-model="payload.password_confirm" />
+  
+      <VBtnRegister
+        :disabled="validations"
+        @click="submit"
+      />
+    </div>
   </v-container>
 </template>
 
