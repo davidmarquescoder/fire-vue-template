@@ -5,13 +5,20 @@ import 'vuetify/styles'
 // Composables
 import { createVuetify } from 'vuetify'
 
+// Themes
+import { customDarkTheme, customLightTheme } from '@/themes/CustomThemes'
+
 // Components
 import { VTextField } from 'vuetify/components/VTextField'
 import { VBtn } from 'vuetify/components/VBtn'
 
 export default createVuetify({
   theme: {
-    defaultTheme: 'dark',
+    defaultTheme: 'customDarkTheme',
+    themes: {
+      customLightTheme,
+      customDarkTheme,
+    },
   },
   aliases: {
     // NOTE LOGIN FORM
